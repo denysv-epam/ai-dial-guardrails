@@ -87,3 +87,8 @@ main()
 #    Injections to try 👉 tasks.PROMPT_INJECTIONS_TO_TEST.md
 # 5. Enhance SYSTEM_PROMPT that no Prompt Injection (and combinations) will work.
 
+
+# Conclusion:
+# Many injections from the test list work without an enhanced SYSTEM_PROMPT.
+# When the SYSTEM_PROMPT is enhanced, it functions as expected.
+

@@ -1,10 +1,10 @@
-from langchain_core.messages import BaseMessage, AIMessage, SystemMessage, HumanMessage
+from langchain_core.messages import AIMessage, BaseMessage, HumanMessage, SystemMessage
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.prompts import SystemMessagePromptTemplate, ChatPromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
 from langchain_openai import AzureChatOpenAI
 from pydantic import SecretStr
 
-from tasks._constants import DIAL_URL, API_KEY
+from tasks._constants import API_KEY, DIAL_URL
 
 SYSTEM_PROMPT = "You are a secure colleague directory assistant designed to help users find contact information for business purposes."
 
@@ -28,16 +28,22 @@ VALIDATION_PROMPT = """NEED TO WRITE IT"""
 
 FILTER_SYSTEM_PROMPT = """NEED TO WRITE IT"""
 
-#TODO 1:
+# TODO 1:
 # Create AzureChatOpenAI client, model to use `gpt-4.1-nano-2025-04-14` (or any other mini or nano models)
 
-def validate(llm_output: str) :
-    #TODO 2:
+
+def validate(llm_output: str):
+    # TODO 2:
     # Make validation of LLM output to check leaks of PII
     raise NotImplementedError
 
+
 def main(soft_response: bool):
-    #TODO 3:
+    """
+    $ python -m tasks.t_3.output_llm_based_validation
+    """
+
+    # TODO 3:
     # Create console chat with LLM, preserve history there.
     # User input -> generation -> validation -> valid -> response to user
     #                                        -> invalid -> soft_response -> filter response with LLM -> response to user
@@ -47,7 +53,7 @@ def main(soft_response: bool):
 
 main(soft_response=False)
 
-#TODO:
+# TODO:
 # ---------
 # Create guardrail that will prevent leaks of PII (output guardrail).
 # Flow:

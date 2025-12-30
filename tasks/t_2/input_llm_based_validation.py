@@ -124,4 +124,5 @@ main()
 # Conclusion:
 # This approach is partially effective; it appears to detect simple injections.
 # However, more advanced injections can still bypass it.
-# Therefore, this safeguard needs extra security measures to prevent prompt injections.
+# Therefore, this approach needs extra security measures to prevent prompt injections.
+# Such as SYSTEM_PROMPT with explicit rules to prohibit sensitive information in the response

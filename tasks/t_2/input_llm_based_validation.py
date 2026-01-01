@@ -1,6 +1,7 @@
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage
 from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate
+from langchain_core.prompts import (ChatPromptTemplate,
+                                    SystemMessagePromptTemplate)
 from langchain_openai import AzureChatOpenAI
 from pydantic import BaseModel, Field, SecretStr
 
